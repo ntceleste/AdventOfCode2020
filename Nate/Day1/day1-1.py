@@ -1,9 +1,10 @@
+
 input = open("input.txt")
 inputLines = input.read().split()
-print(inputLines[3])
+numbers = list(map(int, inputLines))
 
-for i in inputLines:
-    for j in inputLines:
-        if ((int(i) + int(j)) == 2020):
-            print(int(i) * int(j))
-            exit()
+for i in numbers:
+    target = 2020 - i
+    if target in numbers:
+        print(target * i)
+        exit()
