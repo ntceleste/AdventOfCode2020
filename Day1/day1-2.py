@@ -7,3 +7,4 @@ for i in inputLines:
         for k in inputLines:
             if ((int(i) + int(j) + int(k)) == 2020):
                 print(int(i) * int(j) * int(k))
+                exit()
