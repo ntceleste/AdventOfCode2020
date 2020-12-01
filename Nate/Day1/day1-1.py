@@ -1,7 +1,6 @@
+input = open("input.txt").read().split()
+numbers = list(map(int, input))
 
-input = open("input.txt")
-inputLines = input.read().split()
-numbers = list(map(int, inputLines))
 
 for i in numbers:
     target = 2020 - i
