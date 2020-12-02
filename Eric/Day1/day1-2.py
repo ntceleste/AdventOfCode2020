@@ -1,15 +1,20 @@
-f=open('input.txt', 'r')
-numbers = [int((line.strip())) for line in f]
-f.close()
-stop = 0
+input = open('input.txt').read().split()
+numbers = list(map(int, input))
+
+index = 0
+used = []
 for i in numbers:
+	yndex = 0
 	for y in numbers:
-		for z in numbers:
-			if i != y and y != z and  i + y + z == 2020:
-				print('{} * {} * {} = {}'.format(i, y, z, i*y*z))
-				stop = 1
-				break
-			if stop:
-				break
-	if stop:
-		break
+		needle = 2020 - i - y
+		try:
+			found = numbers.index(needle)
+			solution = i * y * needle
+			if found != index and found != yndex and index != yndex and solution not in used:
+				used.append(solution)
+				print('{} * {} * {} = {}'.format(i, y, needle, i * y * needle))
+		except:
+			pass
+		yndex += 1
+	index += 1
+
