@@ -4,6 +4,9 @@ starting = [
 
 goal = 30000000
 
+# this method is slow (takes over 20 seconds)
+# but it seems to work
+
 for turns in starting:
     print('starting {}'.format(turns))
     seen = {}
