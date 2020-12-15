@@ -1,5 +1,5 @@
 starting = [
-    [11,18,0,20,1,7,16]
+    [11, 18, 0, 20, 1, 7, 16]
 ]
 
 goal = 30000000
@@ -27,7 +27,5 @@ for turns in starting:
             'dist': dist
         }
         last_seen = distance
-        
+
     print(last_seen)
-
-
